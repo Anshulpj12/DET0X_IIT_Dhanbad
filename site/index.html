@@ -60,14 +60,14 @@
 <!-- TopNavBar -->
 <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 dark:border-gray-800 shadow-sm">
 <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-black tracking-tighter text-green-600 dark:text-green-500 font-headline">DET0X</div>
+<a href="index.html" class="text-2xl font-black tracking-tighter text-green-600 dark:text-green-500 font-headline no-underline">DET0X</a>
 <div class="hidden md:flex space-x-8 items-center font-body text-sm font-medium">
 <a class="text-green-600 dark:text-green-500 border-b-2 border-green-600 pb-1" href="index.html">Home</a>
 <a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="warehouse.html">Smart Warehouse</a>
 <a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="price.html">Price Intelligence</a>
 <a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="traceability.html">Traceability</a>
 </div>
-<button class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all active:scale-95 duration-200 text-sm shadow-md hover:shadow-lg">
+<button onclick="window.location.href='warehouse.html'" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all active:scale-95 duration-200 text-sm shadow-md hover:shadow-lg">
                 Get Started
             </button>
 </div>
@@ -91,11 +91,11 @@
                     Farmers grow the food. <strong class="font-semibold text-gray-900">They deserve the profit.</strong>
 </p>
 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-<button class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all active:scale-95 duration-200 shadow-lg shadow-green-600/30 flex items-center justify-center space-x-2">
+<button onclick="window.location.href='warehouse.html'" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all active:scale-95 duration-200 shadow-lg shadow-green-600/30 flex items-center justify-center space-x-2">
 <span>Farmer Side</span>
 <span class="material-symbols-outlined text-xl">agriculture</span>
 </button>
-<button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all active:scale-95 duration-200 shadow-lg shadow-orange-500/30 flex items-center justify-center space-x-2">
+<button onclick="window.location.href='traceability.html'" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all active:scale-95 duration-200 shadow-lg shadow-orange-500/30 flex items-center justify-center space-x-2">
 <span>Consumer Side</span>
 <span class="material-symbols-outlined text-xl">shopping_cart</span>
 </button>
@@ -267,7 +267,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Pillar 1 -->
-<div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative">
+<div onclick="window.location.href='warehouse.html'" style="cursor:pointer" class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative">
 <div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
 <div class="h-40 flex items-center justify-center mb-6 relative z-10">
 <img class="h-full object-contain drop-shadow-lg group-hover:-translate-y-2 transition-transform duration-500" data-alt="A 3D isometric rendering of a modern smart warehouse facility equipped with solar panels on the roof. A refrigerated delivery truck is parked at the loading dock. Drones hover nearby. The scene highlights energy efficiency and advanced logistics in agriculture. Bright, light-mode aesthetic with greens and clean whites." src="https://lh3.googleusercontent.com/aida/AP1WRLsbp1PnlE4KVJ4JEg9yCImRWqXb1w05MEgJyhUnEb_6pSA_SnGPJAVOLw3bytHxEJOABrEujOJYCF8-rk-LXZqho0HC6AcRYp6sZqXHxImAupGNFs02TTno4jFTsva6XxqhEGC8rNOv3hDBpjHc9_fLcGpd9faPalPiQYjKjaX5mB6XWwhhe9b1vaJ5nJfUYv5ZrDmw4k5dUdB_qXH9dZ2Y-8Ln0rAsD65AAtCzE-cDD_Cj6d5hHhfyE_l3"/>
@@ -278,7 +278,7 @@
 </div>
 </div>
 <!-- Pillar 2 -->
-<div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative">
+<div onclick="window.location.href='price.html'" style="cursor:pointer" class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative">
 <div class="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
 <div class="h-40 flex items-center justify-center mb-6 relative z-10">
 <!-- Reusing icon from IMAGE_7 based on prompt request -->
@@ -290,7 +290,7 @@
 </div>
 </div>
 <!-- Pillar 3 -->
-<div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative md:col-span-2 lg:col-span-1">
+<div onclick="window.location.href='traceability.html'" style="cursor:pointer" class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative md:col-span-2 lg:col-span-1">
 <div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
 <div class="h-40 flex items-center justify-center mb-6 relative z-10">
 <!-- Reusing icon from IMAGE_7 based on prompt request -->
@@ -353,7 +353,7 @@
 <!-- Footer -->
 <footer class="bg-gray-50 dark:bg-gray-950 w-full py-12 border-t border-gray-200 dark:border-gray-800 flat no shadows">
 <div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
-<div class="text-xl font-bold text-gray-900 dark:text-white font-headline mb-4 md:mb-0">DET0X</div>
+<div class="text-xl font-bold text-gray-900 dark:text-white font-headline mb-4 md:mb-0" onclick="window.location.href='index.html'" style="cursor:pointer">DET0X</div>
 <div class="font-body text-sm text-gray-500 dark:text-gray-400 mb-6 md:mb-0 text-center md:text-left">
                 © 2026 DET0X. Partnered with IIT (ISM) Dhanbad.
             </div>
