@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Powered Price Intelligence - DET0X</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#16a34a",
+                        "primary-dark": "#15803d",
+                        "primary-light": "#dcfce7",
+                        accent: "#f97316",
+                        "accent-light": "#ffedd5",
+                        dark: "#111827",
+                        light: "#f9fafb"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Public Sans", "sans-serif"],
+                        display: ["Public Sans", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        label: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #16a34a, #f97316);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #ffedd5 0%, #dcfce7 100%);
+        }
+
+        .chart-bar-hover:hover {
+            opacity: 0.8;
+            transform: scaleY(1.02);
+            transform-origin: bottom;
+            transition: all 0.2s ease;
+        }
+        
+        /* Dashboard mock specific styles */
+        .grid-bg {
+            background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: center bottom;
+        }
+    </style>
+</head>
+<body class="font-body text-dark bg-white antialiased">
+<!-- Shared Component: TopNavBar -->
+<nav class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-2xl mx-auto transition-all duration-300 ease-in-out active:scale-95">
+<div class="flex items-center gap-2">
+<img alt="DET0X Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvl3mTFcIktm4EHeb2i1c-77XANxG51QcuomwjFeeTkHFOqZyq9_HmiwxnOsAnthoyLoNufw66yp8in7VioUHSOB66grY2ViGC6i4Et2-ltJN-D8F-SZOEEItIjOqs8qqZNxYqGnUF6OfshLV2vU0JBJwMZXwAOKRMtULr982ksSgzeCKoAFaaIr_N0j-aq6Q325zY7VdCqiQVobgJCso3t2hR7YoK2LFJsWKJ-0iHoVh_pjsFmBHJsspQD"/>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors py-2" href="index.html">Home</a>
+<a class="font-body text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors py-2" href="warehouse.html">Smart Warehouse</a>
+<a class="font-body text-sm font-medium text-green-600 dark:text-green-500 border-b-2 border-green-600 dark:border-green-500 pb-1 font-bold" href="price.html">Price Intelligence</a>
+<a class="font-body text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors py-2" href="traceability.html">Traceability</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors">
+                    Get Advisory
+                </button>
+<div class="flex gap-2">
+<button aria-label="Notifications" class="p-2 text-gray-500 hover:bg-gray-50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button aria-label="Account" class="p-2 text-gray-500 hover:bg-gray-50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="hero-bg pt-20 pb-24 overflow-hidden relative">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/80 rounded-full text-sm font-semibold text-accent border border-accent/20">
+<span class="material-symbols-outlined text-base">trending_up</span>
+                        Data-Driven Decisions
+                    </div>
+<h1 class="font-headline text-5xl md:text-6xl font-black tracking-tight text-dark leading-tight">
+                        AI-Powered <br/>
+<span class="gradient-text">Price Intelligence</span>
+</h1>
+<p class="text-lg md:text-xl text-gray-700 max-w-lg leading-relaxed">
+                        Real-time mandi prices, 7-day forecasts, and actionable sell recommendations delivered instantly via WhatsApp.
+                    </p>
+<div class="pt-4 flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-bold shadow-lg shadow-primary/30 transition-all hover:-translate-y-1">
+                            View Live Dashboard
+                        </button>
+<button class="bg-white hover:bg-gray-50 text-dark border border-gray-200 px-8 py-3 rounded-lg font-bold shadow-sm transition-all flex items-center gap-2">
+<img alt="" class="w-5 h-5 object-contain" data-alt="Small green WhatsApp icon logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARLROXF3RL-AfO-cXQjY40RmxXgJdvUl0csSaJwmchw8VhsJbNm9ZZxZ9_pE6KaXc8IPvAoP0pFrvuNpmNvNHuMEnPKx1QWB9AoLbyFnN3bZsTNSb00l7GHiNHZ5l-hwDLMRyBIJHG8bymxwk2dWkE6MfUE7xDa8ck4tT49d6iiRenz-VlvtPAdF2XCLAzIGzUP3r5kfpMxB10a83PlF4qNe-R-hi5I6B4LPPv15muInVOAA5sNKXeE8JfpdFxeXQsc07QmPH7N7Wj"/>
+                            Try WhatsApp Bot
+                        </button>
+</div>
+</div>
+<div class="relative h-[400px] flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full blur-3xl animate-pulse"></div>
+<!-- 3D Analytics Illustration Placeholder -->
+<div class="relative z-10 w-full h-full max-w-md mx-auto" data-alt="High-quality 3D isometric illustration of a floating glassmorphism analytics dashboard with glowing orange and green bar charts, a magnifying glass inspecting data, set against a clean, bright, modern light-mode background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO4rBJnK4fJ3I7b6t_r4qL10qBZaeYXBBJ_2aXY7MBwJV05dd2Jjlr5WXLcc8A3hRqd1V2fpubuzPiRpNp4vBragZhp311m3q11SYbnF0HQXGzi8pHFKYsYOtgz25rdvaBDb117k-U43Ad9VJxhsmkM-0H5eLV4BguDW7gt5s59iL7jUsOSS-XIlgiOlmCZQkj71G_e10KgP4EwUVyh-uMgStgXCM00MD77QtWPR3MtYXkdRU-taU5MUCPMj8HVBU4kKezeQHJ4UC9')"></div>
+</div>
+</div>
+</section>
+<!-- The Information Black Hole Section -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-dark mb-4">The Information Black Hole</h2>
+<p class="text-gray-600 text-lg">Farmers operate in the dark, leading to massive value leakage across the supply chain.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-light p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-4">
+<span class="material-symbols-outlined text-2xl">visibility_off</span>
+</div>
+<h3 class="font-bold text-lg mb-2">Zero Visibility</h3>
+<p class="text-sm text-gray-600">Complete lack of price visibility beyond the local mandi.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-light p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 group-hover:text-accent transition-colors mb-4">
+<span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+</div>
+<h3 class="font-bold text-lg mb-2">Price Manipulation</h3>
+<p class="text-sm text-gray-600">Vulnerability to trader cartelization and artificial price suppression.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-light p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-4">
+<span class="material-symbols-outlined text-2xl">signal_cellular_nodata</span>
+</div>
+<h3 class="font-bold text-lg mb-2">No Demand Signals</h3>
+<p class="text-sm text-gray-600">Inability to anticipate market demand leading to crop dumping.</p>
+</div>
+<!-- Card 4 (Highlight) -->
+<div class="bg-accent-light border-accent/20 border p-6 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl text-accent">pie_chart</span>
+</div>
+<div class="relative z-10">
+<div class="inline-block px-2 py-1 bg-accent/10 text-accent text-xs font-bold rounded mb-3 uppercase tracking-wider">RBI Data Report</div>
+<h3 class="font-bold text-lg mb-4">Farmer Share of Retail Price</h3>
+<ul class="space-y-3">
+<li>
+<div class="flex justify-between text-sm font-medium mb-1">
+<span>Tomato</span>
+<span class="text-accent font-bold">33%</span>
+</div>
+<div class="w-full bg-white/50 rounded-full h-1.5"><div class="bg-accent h-1.5 rounded-full" style="width: 33%"></div></div>
+</li>
+<li>
+<div class="flex justify-between text-sm font-medium mb-1">
+<span>Onion</span>
+<span class="text-accent font-bold">36%</span>
+</div>
+<div class="w-full bg-white/50 rounded-full h-1.5"><div class="bg-accent h-1.5 rounded-full" style="width: 36%"></div></div>
+</li>
+<li>
+<div class="flex justify-between text-sm font-medium mb-1">
+<span>Potato</span>
+<span class="text-accent font-bold">37%</span>
+</div>
+<div class="w-full bg-white/50 rounded-full h-1.5"><div class="bg-accent h-1.5 rounded-full" style="width: 37%"></div></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dual Interface Section (Dashboard & WhatsApp) -->
+<section class="py-24 bg-light overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-dark mb-4">Intelligence Delivered Everywhere</h2>
+<p class="text-gray-600 text-lg">Whether on a complex web dashboard or a simple feature phone, get the insights you need.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<!-- Analytics Dashboard Mock -->
+<div class="w-full lg:w-2/3 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col">
+<!-- Dashboard Header -->
+<div class="bg-gray-50 border-b border-gray-100 px-6 py-4 flex justify-between items-center">
+<div>
+<h3 class="font-bold text-gray-800">Tomato Price Dashboard <span class="text-sm font-normal text-gray-500">(per quintal)</span></h3>
+<p class="text-xs text-gray-500">Live updating across major mandis</p>
+</div>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-primary/10 text-primary text-xs font-bold rounded flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Live
+                                </span>
+</div>
+</div>
+<!-- Dashboard Body -->
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-end mb-6">
+<div class="text-4xl font-headline font-black text-primary">₹2,950 <span class="text-sm font-normal text-gray-500 font-body">Azadpur Max</span></div>
+<!-- AI Recommendation Box -->
+<div class="bg-accent-light border border-accent p-3 rounded-lg max-w-xs flex items-start gap-3 shadow-sm">
+<span class="material-symbols-outlined text-accent mt-0.5">smart_toy</span>
+<div>
+<p class="text-sm font-bold text-dark">AI Recommendation</p>
+<p class="text-xs text-gray-700">Hold 5 days. Price expected to rise 18%.</p>
+</div>
+</div>
+</div>
+<!-- Chart Area -->
+<div class="relative h-64 w-full mt-4 flex items-end justify-around pb-6 grid-bg border-b border-l border-gray-200">
+<!-- Y Axis Labels -->
+<div class="absolute left-[-40px] top-0 bottom-6 flex flex-col justify-between text-xs text-gray-400 text-right w-8">
+<span>4k</span>
+<span>3k</span>
+<span>2k</span>
+<span>1k</span>
+</div>
+<!-- Bars -->
+<div class="flex flex-col items-center gap-2 group w-1/5">
+<div class="w-full bg-gray-300 rounded-t-sm h-[46%] chart-bar-hover relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">₹1,850</div>
+</div>
+<span class="text-xs font-medium text-gray-600">Local</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/5">
+<div class="w-full bg-primary rounded-t-sm h-[73%] chart-bar-hover relative shadow-[0_0_15px_rgba(22,163,74,0.3)]">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-primary">₹2,950</div>
+</div>
+<span class="text-xs font-bold text-primary">Azadpur</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/5">
+<div class="w-full bg-gray-300 rounded-t-sm h-[64%] chart-bar-hover relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">₹2,580</div>
+</div>
+<span class="text-xs font-medium text-gray-600">Vashi</span>
+</div>
+<div class="flex flex-col items-center gap-2 group w-1/5">
+<div class="w-full bg-gray-300 rounded-t-sm h-[56%] chart-bar-hover relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">₹2,250</div>
+</div>
+<span class="text-xs font-medium text-gray-600">Koyambedu</span>
+</div>
+<!-- Forecast Divider -->
+<div class="absolute right-[22%] top-0 bottom-6 w-px border-l-2 border-dashed border-gray-300">
+<span class="absolute -top-4 -left-10 text-[10px] text-gray-400 bg-white px-1">7-Day Forecast</span>
+</div>
+<!-- Forecast Bar -->
+<div class="flex flex-col items-center gap-2 group w-1/5">
+<div class="w-full bg-[repeating-linear-gradient(45deg,transparent,transparent_2px,#f97316_2px,#f97316_4px)] border border-accent/50 rounded-t-sm h-[83%] chart-bar-hover relative opacity-80">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-bold text-accent">₹3,350</div>
+</div>
+<span class="text-xs font-bold text-accent">Forecast</span>
+</div>
+</div>
+</div>
+</div>
+<!-- WhatsApp Bot Mock -->
+<div class="w-full max-w-[320px] mx-auto lg:w-1/3 bg-[#ece5dd] rounded-[2rem] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col h-[600px] relative">
+<!-- Phone Notch -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-xl z-20"></div>
+<!-- WA Header -->
+<div class="bg-[#075e54] text-white p-4 pt-8 flex items-center gap-3 z-10 shadow-md">
+<span class="material-symbols-outlined">arrow_back</span>
+<div class="w-10 h-10 bg-white rounded-full flex items-center justify-center p-1">
+<img alt="DET0X Logo Bot" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvl3mTFcIktm4EHeb2i1c-77XANxG51QcuomwjFeeTkHFOqZyq9_HmiwxnOsAnthoyLoNufw66yp8in7VioUHSOB66grY2ViGC6i4Et2-ltJN-D8F-SZOEEItIjOqs8qqZNxYqGnUF6OfshLV2vU0JBJwMZXwAOKRMtULr982ksSgzeCKoAFaaIr_N0j-aq6Q325zY7VdCqiQVobgJCso3t2hR7YoK2LFJsWKJ-0iHoVh_pjsFmBHJsspQD"/>
+</div>
+<div>
+<h4 class="font-bold text-sm">DET0X Mandi Bot</h4>
+<p class="text-[10px] text-white/80">Active now</p>
+</div>
+</div>
+<!-- Chat Area -->
+<div class="flex-1 p-4 space-y-4 overflow-y-auto flex flex-col justify-end pb-4 bg-[url('https://transparenttextures.com/patterns/cubes.png')]">
+<!-- Date Bubble -->
+<div class="mx-auto bg-[#e1f3fb] text-gray-500 text-[10px] px-2 py-1 rounded-md shadow-sm">Today</div>
+<!-- User Message -->
+<div class="bg-[#dcf8c6] p-3 rounded-lg rounded-tr-none self-end max-w-[85%] shadow-sm relative">
+<p class="text-sm text-gray-800">टमाटर का भाव बताओ</p>
+<span class="text-[9px] text-gray-500 absolute bottom-1 right-2">10:42 AM <span class="material-symbols-outlined text-[10px] text-blue-500 inline-block align-middle">done_all</span></span>
+<div class="absolute -right-2 top-0 w-4 h-4 bg-[#dcf8c6] [clip-path:polygon(0_0,0%_100%,100%_0)]"></div>
+</div>
+<!-- Bot Reply -->
+<div class="bg-white p-3 rounded-lg rounded-tl-none self-start max-w-[90%] shadow-sm relative">
+<div class="absolute -left-2 top-0 w-4 h-4 bg-white [clip-path:polygon(100%_0,0_0,100%_100%)]"></div>
+<p class="text-sm font-bold text-primary mb-1">🍅 Tomato Prices Today</p>
+<div class="text-xs text-gray-700 space-y-2 mb-2">
+<div class="flex justify-between border-b border-gray-100 pb-1"><span>Local Mandi:</span> <b>₹1,850/q</b></div>
+<div class="flex justify-between border-b border-gray-100 pb-1"><span>Azadpur (Max):</span> <b class="text-primary">₹2,950/q</b></div>
+<div class="flex justify-between border-b border-gray-100 pb-1"><span>7-Day Forecast:</span> <b class="text-accent">₹3,350/q</b></div>
+</div>
+<div class="bg-accent-light p-2 rounded border border-accent/20">
+<p class="text-xs font-bold text-accent">🤖 AI Advice:</p>
+<p class="text-xs text-gray-800">Hold for 5 days. Price expected to rise 18% in nearest major mandi.</p>
+</div>
+<span class="text-[9px] text-gray-400 block text-right mt-1">10:42 AM</span>
+</div>
+</div>
+<!-- WA Input -->
+<div class="bg-[#f0f0f0] p-2 flex items-center gap-2">
+<div class="flex-1 bg-white rounded-full px-4 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 text-xl">sentiment_satisfied</span>
+<span class="text-gray-400 text-sm flex-1">Type a message</span>
+<span class="material-symbols-outlined text-gray-400 text-xl">attach_file</span>
+</div>
+<div class="w-10 h-10 bg-[#00897b] rounded-full flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-xl ml-1">mic</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact & Delivery Channels -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16">
+<!-- Impact Data Bento Grid -->
+<div>
+<h3 class="font-headline text-2xl font-bold mb-8">Measurable Impact</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-gradient-to-br from-primary to-primary-dark p-8 rounded-2xl text-white shadow-lg shadow-primary/20">
+<p class="text-primary-light font-medium mb-2 uppercase tracking-wide text-sm">Model Accuracy</p>
+<div class="text-5xl font-black font-headline mb-2">85%</div>
+<p class="text-sm opacity-90">Precision on 7-day price predictions across key horticultural commodities.</p>
+</div>
+<div class="bg-light border border-gray-100 p-6 rounded-2xl">
+<p class="text-gray-500 font-medium mb-2 uppercase tracking-wide text-xs">Seasonal Volatility</p>
+<div class="text-3xl font-black text-dark mb-1">40-60%</div>
+<p class="text-xs text-gray-600">Price fluctuation mitigated by AI foresight.</p>
+</div>
+<div class="bg-accent-light border border-accent/20 p-6 rounded-2xl">
+<p class="text-accent font-medium mb-2 uppercase tracking-wide text-xs">Expected Income</p>
+<div class="text-3xl font-black text-accent mb-1">+25-40%</div>
+<p class="text-xs text-gray-700">Increase in net realization per harvest.</p>
+</div>
+</div>
+</div>
+<!-- Delivery Channels -->
+<div>
+<h3 class="font-headline text-2xl font-bold mb-8">Accessible Delivery Channels</h3>
+<p class="text-gray-600 mb-8">Technology must reach the last mile. We deliver critical data points through channels tailored to rural digital literacy levels.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-light transition-colors border border-transparent hover:border-gray-100">
+<div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">WhatsApp Bot</h4>
+<p class="text-sm text-gray-600">Conversational interface supporting local languages (Hindi, Marathi, Telugu) for instant queries.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-light transition-colors border border-transparent hover:border-gray-100">
+<div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">settings_phone</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Voice USSD &amp; Feature Phones</h4>
+<p class="text-sm text-gray-600">Accessible without smartphones or high-speed internet. Dial-in IVR system for daily updates.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl hover:bg-light transition-colors border border-transparent hover:border-gray-100">
+<div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Krishi Mitra Agents</h4>
+<p class="text-sm text-gray-600">Human-in-the-loop advisory. Local tech-enabled youth assisting farmers with complex dashboard insights.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-gray-900 dark:bg-black w-full bottom flex flex-col md:flex-row justify-between items-center px-8 py-12">
+<div class="flex flex-col items-center md:items-start mb-6 md:mb-0 gap-4">
+<div class="text-lg font-headline font-bold text-white flex items-center gap-2">
+<img alt="DET0X Footer Logo" class="h-6 w-auto grayscale brightness-200" src="https://lh3.googleusercontent.com/aida/AP1WRLvl3mTFcIktm4EHeb2i1c-77XANxG51QcuomwjFeeTkHFOqZyq9_HmiwxnOsAnthoyLoNufw66yp8in7VioUHSOB66grY2ViGC6i4Et2-ltJN-D8F-SZOEEItIjOqs8qqZNxYqGnUF6OfshLV2vU0JBJwMZXwAOKRMtULr982ksSgzeCKoAFaaIr_N0j-aq6Q325zY7VdCqiQVobgJCso3t2hR7YoK2LFJsWKJ-0iHoVh_pjsFmBHJsspQD"/>
+</div>
+<p class="font-label text-xs uppercase tracking-widest text-gray-400">© 2024 DET0X Agri-Tech. In partnership with IIT (ISM) Dhanbad.</p>
+</div>
+<div class="flex gap-6 font-label text-xs uppercase tracking-widest text-gray-400 opacity-80 hover:opacity-100">
+<a class="hover:text-orange-500 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-orange-500 transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-orange-500 transition-colors" href="#">Contact Research Lab</a>
+</div>
+</footer>
+</body></html>

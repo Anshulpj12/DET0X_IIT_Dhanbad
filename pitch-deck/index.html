@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DET0X — Restructuring the Agricultural Value Chain</title>
+  <meta name="description" content="DET0X pitch deck for PS 2: Restructuring the Agricultural Value Chain. A platform that empowers FPOs to restructure value-chain economics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- Navigation Dots -->
+  <nav class="nav-dots" id="navDots" aria-label="Slide navigation"></nav>
+
+  <!-- Arrow Navigation -->
+  <button class="nav-arrow nav-arrow--prev" id="prevBtn" aria-label="Previous slide">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  </button>
+  <button class="nav-arrow nav-arrow--next" id="nextBtn" aria-label="Next slide">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </button>
+
+  <!-- Slide Counter -->
+  <div class="slide-counter" id="slideCounter">1 / 12</div>
+
+  <!-- ====== SLIDES ====== -->
+  <div class="slides-container" id="slidesContainer">
+
+    <!-- SLIDE 1: Title -->
+    <section class="slide slide--title active" data-slide="0">
+      <div class="slide__bg-pattern"></div>
+      <div class="slide__content">
+        <div class="title-badge">IIT (ISM) Dhanbad Hackathon · PS 2</div>
+        <h1 class="title-main">
+          <span class="title-team">DET0X</span>
+          <span class="title-divider"></span>
+          <span class="title-topic">Restructuring the<br/>Agricultural Value Chain</span>
+        </h1>
+        <p class="title-tagline">Empowering farmers to capture the value they create — through trust, financing, and infrastructure.</p>
+        <div class="title-cta">
+          <span class="title-cta__icon">→</span>
+          <span>Press arrow keys or click to navigate</span>
+        </div>
+      </div>
+      <div class="slide__leaf slide__leaf--1">🌿</div>
+      <div class="slide__leaf slide__leaf--2">🌾</div>
+      <div class="slide__leaf slide__leaf--3">🍃</div>
+    </section>
+
+    <!-- SLIDE 2: The Problem -->
+    <section class="slide slide--problem" data-slide="1">
+      <div class="slide__content">
+        <div class="slide-label">The Problem</div>
+        <h2>Farmers grow the food.<br/><span class="text-highlight">Middlemen eat the profit.</span></h2>
+        <div class="value-chain-visual">
+          <div class="chain-node chain-node--farmer">
+            <div class="chain-node__icon">👨‍🌾</div>
+            <div class="chain-node__label">Farmer</div>
+            <div class="chain-node__value">Gets ₹30–37</div>
+          </div>
+          <div class="chain-arrow">
+            <div class="chain-arrow__line"></div>
+            <div class="chain-arrow__label">-8%</div>
+          </div>
+          <div class="chain-node chain-node--middleman">
+            <div class="chain-node__icon">🏪</div>
+            <div class="chain-node__label">Village Agent</div>
+          </div>
+          <div class="chain-arrow">
+            <div class="chain-arrow__line"></div>
+            <div class="chain-arrow__label">-12%</div>
+          </div>
+          <div class="chain-node chain-node--middleman">
+            <div class="chain-node__icon">🏛️</div>
+            <div class="chain-node__label">Mandi Agent</div>
+          </div>
+          <div class="chain-arrow">
+            <div class="chain-arrow__line"></div>
+            <div class="chain-arrow__label">-15%</div>
+          </div>
+          <div class="chain-node chain-node--middleman">
+            <div class="chain-node__icon">📦</div>
+            <div class="chain-node__label">Wholesaler</div>
+          </div>
+          <div class="chain-arrow">
+            <div class="chain-arrow__line"></div>
+            <div class="chain-arrow__label">-10%</div>
+          </div>
+          <div class="chain-node chain-node--middleman">
+            <div class="chain-node__icon">🛒</div>
+            <div class="chain-node__label">Retailer</div>
+          </div>
+          <div class="chain-arrow">
+            <div class="chain-arrow__line"></div>
+          </div>
+          <div class="chain-node chain-node--consumer">
+            <div class="chain-node__icon">🧑</div>
+            <div class="chain-node__label">Consumer</div>
+            <div class="chain-node__value">Pays ₹100</div>
+          </div>
+        </div>
+        <p class="slide-footnote">Source: RBI Study on Agricultural Marketing Efficiency, 2025</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: The Scale -->
+    <section class="slide slide--scale" data-slide="2">
+      <div class="slide__content">
+        <div class="slide-label">The Scale of the Crisis</div>
+        <h2>India's farmers are bleeding value at <span class="text-highlight">every step</span></h2>
+        <div class="stats-grid">
+          <div class="stat-card stat-card--red">
+            <div class="stat-card__number" data-count="153000">0</div>
+            <div class="stat-card__unit">₹ Crore / year</div>
+            <div class="stat-card__desc">Post-harvest losses in fruits &amp; vegetables</div>
+          </div>
+          <div class="stat-card stat-card--amber">
+            <div class="stat-card__number" data-count="86" data-suffix="%">0</div>
+            <div class="stat-card__unit"></div>
+            <div class="stat-card__desc">Farmers are small or marginal (&lt;2 hectares)</div>
+          </div>
+          <div class="stat-card stat-card--red">
+            <div class="stat-card__number" data-count="60" data-suffix="%">0</div>
+            <div class="stat-card__unit">up to 70%</div>
+            <div class="stat-card__desc">Middlemen margins on high-value perishables</div>
+          </div>
+          <div class="stat-card stat-card--amber">
+            <div class="stat-card__number" data-count="24" data-suffix="–60%">0</div>
+            <div class="stat-card__unit"></div>
+            <div class="stat-card__desc">Interest charged by informal moneylenders</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Why Existing Solutions Failed -->
+    <section class="slide slide--failures" data-slide="3">
+      <div class="slide__content">
+        <div class="slide-label">Why Existing Solutions Fell Short</div>
+        <h2>DeHaat &amp; Ninjacart digitized the chain.<br/><span class="text-highlight">They didn't restructure the economics.</span></h2>
+        <div class="failures-grid">
+          <div class="failure-col">
+            <div class="failure-col__header failure-col__header--ninja">
+              <span class="failure-col__logo">Ninjacart</span>
+            </div>
+            <ul class="failure-list">
+              <li class="failure-list__item failure-list__item--bad">Optimized logistics, not farmer income</li>
+              <li class="failure-list__item failure-list__item--bad">B2B only — farmer still gets a fraction</li>
+              <li class="failure-list__item failure-list__item--bad">No financing — distress selling continues</li>
+              <li class="failure-list__item failure-list__item--bad">Pure digital — no trust layer</li>
+            </ul>
+          </div>
+          <div class="failure-col">
+            <div class="failure-col__header failure-col__header--dehaat">
+              <span class="failure-col__logo">DeHaat</span>
+            </div>
+            <ul class="failure-list">
+              <li class="failure-list__item failure-list__item--bad">Full-stack cost is unsustainable</li>
+              <li class="failure-list__item failure-list__item--bad">Replaces middlemen with a tech middleman</li>
+              <li class="failure-list__item failure-list__item--bad">Scale over depth — trust takes time</li>
+              <li class="failure-list__item failure-list__item--bad">Limited cold-chain investment</li>
+            </ul>
+          </div>
+          <div class="failure-col failure-col--root">
+            <div class="failure-col__header failure-col__header--root">
+              <span class="failure-col__logo">Root Causes</span>
+            </div>
+            <ul class="failure-list">
+              <li class="failure-list__item failure-list__item--insight">Built tech before understanding farmer pain</li>
+              <li class="failure-list__item failure-list__item--insight">VC growth model ≠ thin agri margins</li>
+              <li class="failure-list__item failure-list__item--insight">Apps can't replace human trust</li>
+              <li class="failure-list__item failure-list__item--insight">Ignored the credit-distress sales link</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Our Insight -->
+    <section class="slide slide--insight" data-slide="4">
+      <div class="slide__content slide__content--centered">
+        <div class="slide-label">Our Insight</div>
+        <div class="insight-quote">
+          <div class="insight-quote__mark">"</div>
+          <p class="insight-quote__text">Don't replace the middlemen.<br/>Empower farmers to <em>become</em> their own middlemen.</p>
+          <div class="insight-quote__mark insight-quote__mark--close">"</div>
+        </div>
+        <div class="insight-model">
+          <div class="insight-model__old">
+            <div class="insight-model__label">Old Model</div>
+            <div class="insight-model__desc">Farmer → Middlemen → Consumer</div>
+            <div class="insight-model__result">Farmer gets 30%</div>
+          </div>
+          <div class="insight-model__arrow">→</div>
+          <div class="insight-model__new">
+            <div class="insight-model__label">Our Model</div>
+            <div class="insight-model__desc">Farmer → FPO (powered by us) → Buyer</div>
+            <div class="insight-model__result">Farmer gets 65–75%</div>
+          </div>
+        </div>
+        <p class="insight-footnote">Inspired by the <strong>Amul model</strong> — where dairy farmers retain 70–75% of consumer price.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: Solution Overview -->
+    <section class="slide slide--solution" data-slide="5">
+      <div class="slide__content">
+        <div class="slide-label">Solution Architecture</div>
+        <h2>The <span class="text-highlight">FPO Operating System</span></h2>
+        <p class="slide-subtitle">A platform + infrastructure + financing engine for Farmer Producer Organizations</p>
+        <div class="architecture-diagram">
+          <div class="arch-layer arch-layer--farmers">
+            <div class="arch-layer__title">👨‍🌾 Smallholder Farmers</div>
+            <div class="arch-layer__badges">
+              <span class="arch-badge">86% of Indian farmers</span>
+              <span class="arch-badge">Avg. &lt;2 hectare land</span>
+            </div>
+          </div>
+          <div class="arch-connector arch-connector--down">▼ Join &amp; Aggregate</div>
+          <div class="arch-layer arch-layer--fpo">
+            <div class="arch-layer__title">🏛️ FPO (Farmer Collective)</div>
+            <div class="arch-layer__badges">
+              <span class="arch-badge">10,000+ FPOs in India</span>
+              <span class="arch-badge">Ready infrastructure</span>
+            </div>
+          </div>
+          <div class="arch-connector arch-connector--down">▼ Powered By</div>
+          <div class="arch-layer arch-layer--platform">
+            <div class="arch-layer__title">📱 Our Platform</div>
+            <div class="arch-pillars">
+              <div class="arch-pillar">
+                <div class="arch-pillar__icon">🧊</div>
+                <div class="arch-pillar__label">Cold Storage Network</div>
+              </div>
+              <div class="arch-pillar">
+                <div class="arch-pillar__icon">💰</div>
+                <div class="arch-pillar__label">Financing Engine</div>
+              </div>
+              <div class="arch-pillar">
+                <div class="arch-pillar__icon">📊</div>
+                <div class="arch-pillar__label">Price Intelligence</div>
+              </div>
+              <div class="arch-pillar">
+                <div class="arch-pillar__icon">🔗</div>
+                <div class="arch-pillar__label">Traceability</div>
+              </div>
+              <div class="arch-pillar">
+                <div class="arch-pillar__icon">🤝</div>
+                <div class="arch-pillar__label">Trust Agents</div>
+              </div>
+            </div>
+          </div>
+          <div class="arch-connector arch-connector--down">▼ Direct Access</div>
+          <div class="arch-layer arch-layer--buyers">
+            <div class="arch-layer__title">🏪 Direct Buyers</div>
+            <div class="arch-layer__badges">
+              <span class="arch-badge">Retailers</span>
+              <span class="arch-badge">HoReCa</span>
+              <span class="arch-badge">Export</span>
+              <span class="arch-badge">D2C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Feature 1 — Warehouse Receipt Financing -->
+    <section class="slide slide--feature1" data-slide="6">
+      <div class="slide__content">
+        <div class="slide-label">Feature 1 — Our #1 Differentiator</div>
+        <h2>Warehouse Receipt <span class="text-highlight">Financing</span></h2>
+        <p class="slide-subtitle">Turns cold storage into a financial hub. Eliminates distress selling.</p>
+        <div class="feature-flow">
+          <div class="flow-step">
+            <div class="flow-step__num">1</div>
+            <div class="flow-step__icon">📦</div>
+            <div class="flow-step__text">Farmer deposits produce at FPO micro cold storage</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step__num">2</div>
+            <div class="flow-step__icon">📄</div>
+            <div class="flow-step__text">Platform generates a digital warehouse receipt (e-NWR)</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step__num">3</div>
+            <div class="flow-step__icon">💵</div>
+            <div class="flow-step__text">Farmer gets instant credit (60–70% of produce value)</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="flow-step__num">4</div>
+            <div class="flow-step__icon">📈</div>
+            <div class="flow-step__text">Waits for better prices, FPO sells at peak → farmer gets remainder</div>
+          </div>
+        </div>
+        <div class="feature-economics">
+          <div class="econ-title">Unit Economics Per Transaction</div>
+          <div class="econ-grid">
+            <div class="econ-item econ-item--revenue">
+              <div class="econ-item__label">Revenue</div>
+              <div class="econ-item__detail">Platform fee: 2–3%</div>
+              <div class="econ-item__detail">Interest spread: 2–4%</div>
+              <div class="econ-item__detail">Storage: ₹200–500/MT/mo</div>
+            </div>
+            <div class="econ-item econ-item--cost">
+              <div class="econ-item__label">Cost</div>
+              <div class="econ-item__detail">Cold storage ops: ₹100–250/MT/mo</div>
+              <div class="econ-item__detail">Digital infra: ₹5–15/txn</div>
+              <div class="econ-item__detail">Field agent: ₹50–100/txn</div>
+            </div>
+            <div class="econ-item econ-item--margin">
+              <div class="econ-item__label">Target CM1</div>
+              <div class="econ-item__value">15–25%</div>
+              <div class="econ-item__detail">Positive from Month 6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: Feature 2 — Price Intelligence -->
+    <section class="slide slide--feature2" data-slide="7">
+      <div class="slide__content">
+        <div class="slide-label">Feature 2</div>
+        <h2>AI-Powered <span class="text-highlight">Price Intelligence</span></h2>
+        <p class="slide-subtitle">Real-time mandi prices + 7-day forecasts via WhatsApp. Farmers finally know what their crops are worth.</p>
+        <div class="price-demo">
+          <div class="price-demo__dashboard">
+            <div class="dashboard-header">
+              <span class="dashboard-header__title">📊 Price Dashboard — Tomato (per quintal)</span>
+              <span class="dashboard-header__date">Aug 7, 2026</span>
+            </div>
+            <div class="dashboard-chart">
+              <div class="chart-bars">
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="--bar-height: 45%;">
+                    <span class="chart-bar__val">₹1,850</span>
+                  </div>
+                  <span class="chart-bar__label">Local</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar chart-bar--highlight" style="--bar-height: 72%;">
+                    <span class="chart-bar__val">₹2,950</span>
+                  </div>
+                  <span class="chart-bar__label">Azadpur</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="--bar-height: 63%;">
+                    <span class="chart-bar__val">₹2,580</span>
+                  </div>
+                  <span class="chart-bar__label">Vashi</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar" style="--bar-height: 55%;">
+                    <span class="chart-bar__val">₹2,250</span>
+                  </div>
+                  <span class="chart-bar__label">Koyamb.</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar chart-bar--prediction" style="--bar-height: 82%;">
+                    <span class="chart-bar__val">₹3,350</span>
+                  </div>
+                  <span class="chart-bar__label">7-day ↑</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-recommendation">
+              <span class="rec-icon">💡</span>
+              <span class="rec-text"><strong>AI Recommendation:</strong> Hold for 5 days. Price expected to rise 18% due to supply dip in Maharashtra.</span>
+            </div>
+          </div>
+          <div class="price-demo__whatsapp">
+            <div class="wa-header">
+              <span class="wa-header__icon">💬</span>
+              <span class="wa-header__title">Krishi Mitra Bot</span>
+              <span class="wa-header__badge">WhatsApp</span>
+            </div>
+            <div class="wa-messages">
+              <div class="wa-msg wa-msg--user">
+                <span>टमाटर का भाव बताओ</span>
+                <span class="wa-msg__time">10:32 AM</span>
+              </div>
+              <div class="wa-msg wa-msg--bot">
+                <span>🍅 <strong>टमाटर — आज के भाव:</strong><br/>
+                📍 स्थानीय मंडी: ₹1,850/q<br/>
+                📍 आज़ादपुर (दिल्ली): ₹2,950/q<br/>
+                📍 वाशी (मुंबई): ₹2,580/q<br/><br/>
+                📈 <strong>7-दिन पूर्वानुमान:</strong> ₹3,350/q (+18%)<br/>
+                💡 सुझाव: 5 दिन रुकें, भाव बढ़ेगा</span>
+                <span class="wa-msg__time">10:32 AM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: Feature 3 — Traceability -->
+    <section class="slide slide--feature3" data-slide="8">
+      <div class="slide__content">
+        <div class="slide-label">Feature 3</div>
+        <h2>Blockchain <span class="text-highlight">Traceability</span></h2>
+        <p class="slide-subtitle">QR code on every batch → full farm-to-fork journey. Enables 20–40% premium pricing.</p>
+        <div class="trace-demo">
+          <div class="trace-qr">
+            <div class="qr-box">
+              <div class="qr-placeholder">
+                <div class="qr-grid">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="qr-label">Scan to trace</div>
+            </div>
+          </div>
+          <div class="trace-journey">
+            <div class="journey-step journey-step--done">
+              <div class="journey-step__dot"></div>
+              <div class="journey-step__content">
+                <div class="journey-step__title">🌱 Harvested</div>
+                <div class="journey-step__detail">Farm: Ramesh Yadav, Nashik, MH</div>
+                <div class="journey-step__detail">Date: Aug 2, 2026 · 6:30 AM</div>
+              </div>
+            </div>
+            <div class="journey-step journey-step--done">
+              <div class="journey-step__dot"></div>
+              <div class="journey-step__content">
+                <div class="journey-step__title">🧊 Cold Stored</div>
+                <div class="journey-step__detail">FPO Micro Unit #47, Nashik</div>
+                <div class="journey-step__detail">Temp: 4°C · Humidity: 85%</div>
+              </div>
+            </div>
+            <div class="journey-step journey-step--done">
+              <div class="journey-step__dot"></div>
+              <div class="journey-step__content">
+                <div class="journey-step__title">✅ Quality Graded</div>
+                <div class="journey-step__detail">Grade: A · Pesticide-free certified</div>
+                <div class="journey-step__detail">FSSAI Compliance: Verified</div>
+              </div>
+            </div>
+            <div class="journey-step journey-step--done">
+              <div class="journey-step__dot"></div>
+              <div class="journey-step__content">
+                <div class="journey-step__title">🚛 In Transit</div>
+                <div class="journey-step__detail">Reefer truck → Azadpur Mandi, Delhi</div>
+                <div class="journey-step__detail">ETA: Aug 8, 2026 · 5:00 AM</div>
+              </div>
+            </div>
+            <div class="journey-step">
+              <div class="journey-step__dot"></div>
+              <div class="journey-step__content">
+                <div class="journey-step__title">🏪 Delivered</div>
+                <div class="journey-step__detail">Awaiting delivery confirmation</div>
+              </div>
+            </div>
+          </div>
+          <div class="trace-premium">
+            <div class="trace-premium__title">Premium Pricing Enabled</div>
+            <div class="trace-premium__compare">
+              <div class="trace-premium__item">
+                <span class="trace-premium__label">Without Traceability</span>
+                <span class="trace-premium__price">₹2,950/q</span>
+              </div>
+              <div class="trace-premium__item trace-premium__item--highlight">
+                <span class="trace-premium__label">With Traceability ✅</span>
+                <span class="trace-premium__price">₹3,700/q</span>
+                <span class="trace-premium__gain">+25% premium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: Business Model -->
+    <section class="slide slide--business" data-slide="9">
+      <div class="slide__content">
+        <div class="slide-label">Business Model</div>
+        <h2>Multi-Stream Revenue with a Path to <span class="text-highlight">Unit Profitability</span></h2>
+        <div class="business-layout">
+          <div class="revenue-streams">
+            <div class="rev-stream">
+              <div class="rev-stream__icon">💳</div>
+              <div class="rev-stream__name">Transaction Fee</div>
+              <div class="rev-stream__detail">2–3% on produce sold</div>
+              <div class="rev-stream__tag rev-stream__tag--high">High Margin</div>
+            </div>
+            <div class="rev-stream">
+              <div class="rev-stream__icon">🏦</div>
+              <div class="rev-stream__name">Financing Spread</div>
+              <div class="rev-stream__detail">Interest margin on WR loans</div>
+              <div class="rev-stream__tag rev-stream__tag--high">High Margin</div>
+            </div>
+            <div class="rev-stream">
+              <div class="rev-stream__icon">🧊</div>
+              <div class="rev-stream__name">Storage Fees</div>
+              <div class="rev-stream__detail">₹200–500/MT/month</div>
+              <div class="rev-stream__tag rev-stream__tag--med">Medium</div>
+            </div>
+            <div class="rev-stream">
+              <div class="rev-stream__icon">⭐</div>
+              <div class="rev-stream__name">Premium Facilitation</div>
+              <div class="rev-stream__detail">5–8% on traceable produce</div>
+              <div class="rev-stream__tag rev-stream__tag--high">High Margin</div>
+            </div>
+            <div class="rev-stream">
+              <div class="rev-stream__icon">🛒</div>
+              <div class="rev-stream__name">Input Commerce</div>
+              <div class="rev-stream__detail">Bulk seed/fertilizer commission</div>
+              <div class="rev-stream__tag rev-stream__tag--med">Medium</div>
+            </div>
+            <div class="rev-stream">
+              <div class="rev-stream__icon">📊</div>
+              <div class="rev-stream__name">Data &amp; SaaS</div>
+              <div class="rev-stream__detail">FPO tools + anonymized data</div>
+              <div class="rev-stream__tag rev-stream__tag--long">Long-term</div>
+            </div>
+          </div>
+          <div class="profitability-timeline">
+            <div class="timeline-title">Path to Profitability</div>
+            <div class="timeline-track">
+              <div class="timeline-phase timeline-phase--invest">
+                <div class="timeline-phase__period">Mo 1–6</div>
+                <div class="timeline-phase__label">Invest</div>
+                <div class="timeline-phase__bar" style="--phase-width: 30%;"></div>
+              </div>
+              <div class="timeline-phase timeline-phase--break">
+                <div class="timeline-phase__period">Mo 6–12</div>
+                <div class="timeline-phase__label">Break-even</div>
+                <div class="timeline-phase__bar" style="--phase-width: 30%;"></div>
+              </div>
+              <div class="timeline-phase timeline-phase--profit">
+                <div class="timeline-phase__period">Mo 12–18</div>
+                <div class="timeline-phase__label">CM1+</div>
+                <div class="timeline-phase__bar" style="--phase-width: 40%;"></div>
+              </div>
+            </div>
+            <div class="timeline-note">Year 2+: Data flywheel + network effects compound</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: Competitive Moat -->
+    <section class="slide slide--moat" data-slide="10">
+      <div class="slide__content">
+        <div class="slide-label">Competitive Differentiation</div>
+        <h2>Why We Succeed Where <span class="text-highlight">Others Struggled</span></h2>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th class="comp-col--other">DeHaat</th>
+                <th class="comp-col--other">Ninjacart</th>
+                <th class="comp-col--us">DET0X</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="comp-dim">Core Model</td>
+                <td>Full-stack agritech</td>
+                <td>B2B supply chain</td>
+                <td class="comp-us"><strong>FPO Operating System</strong></td>
+              </tr>
+              <tr>
+                <td class="comp-dim">Farmer Financing</td>
+                <td><span class="comp-bad">❌ Limited</span></td>
+                <td><span class="comp-bad">❌ None</span></td>
+                <td class="comp-us"><span class="comp-good">✅ Warehouse Receipt Engine</span></td>
+              </tr>
+              <tr>
+                <td class="comp-dim">Cold Chain</td>
+                <td><span class="comp-bad">❌ Relies on existing</span></td>
+                <td><span class="comp-bad">❌ Relies on existing</span></td>
+                <td class="comp-us"><span class="comp-good">✅ Decentralized micro units</span></td>
+              </tr>
+              <tr>
+                <td class="comp-dim">Trust Layer</td>
+                <td><span class="comp-mid">⚠️ Franchise centers</span></td>
+                <td><span class="comp-bad">❌ Pure digital</span></td>
+                <td class="comp-us"><span class="comp-good">✅ Krishi Mitra agents</span></td>
+              </tr>
+              <tr>
+                <td class="comp-dim">Value Capture</td>
+                <td>Company captures</td>
+                <td>Company captures</td>
+                <td class="comp-us"><strong>FPO &amp; Farmer capture</strong></td>
+              </tr>
+              <tr>
+                <td class="comp-dim">Scalability</td>
+                <td>Linear (capital heavy)</td>
+                <td>Linear</td>
+                <td class="comp-us"><span class="comp-good">✅ Network effects via FPOs</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: Ask / Summary -->
+    <section class="slide slide--ask" data-slide="11">
+      <div class="slide__content slide__content--centered">
+        <div class="slide-label">The Opportunity</div>
+        <h2>Why <span class="text-highlight">Now?</span></h2>
+        <div class="why-now-grid">
+          <div class="why-now-card">
+            <div class="why-now-card__icon">🏛️</div>
+            <div class="why-now-card__title">10,000+ FPOs</div>
+            <div class="why-now-card__desc">Government is actively forming &amp; funding FPOs — ready infrastructure to plug into</div>
+          </div>
+          <div class="why-now-card">
+            <div class="why-now-card__icon">📱</div>
+            <div class="why-now-card__title">UPI Revolution</div>
+            <div class="why-now-card__desc">Digital payments penetration in rural India makes instant credit disbursement possible</div>
+          </div>
+          <div class="why-now-card">
+            <div class="why-now-card__icon">🧊</div>
+            <div class="why-now-card__title">Cold Chain Subsidies</div>
+            <div class="why-now-card__desc">PMKSY &amp; AIF provide up to 35% subsidy on cold storage infrastructure</div>
+          </div>
+          <div class="why-now-card">
+            <div class="why-now-card__icon">🤖</div>
+            <div class="why-now-card__title">AI + IoT Maturity</div>
+            <div class="why-now-card__desc">Affordable sensors, LLM-powered advisory, and price prediction models are production-ready</div>
+          </div>
+        </div>
+        <div class="ask-section">
+          <div class="ask-section__team">
+            <span class="ask-team-name">Team DET0X</span>
+            <span class="ask-team-event">IIT (ISM) Dhanbad Hackathon</span>
+          </div>
+          <div class="ask-section__tagline">
+            Restructuring the agricultural value chain — <br/>
+            <strong>one FPO at a time.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="slide__leaf slide__leaf--1">🌿</div>
+      <div class="slide__leaf slide__leaf--2">🌾</div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

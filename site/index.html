@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DET0X - Restructuring India's Agricultural Value Chain</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {},
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Public Sans", "sans-serif"
+                    ],
+                    "display": [
+                            "Public Sans", "sans-serif"
+                    ],
+                    "body": [
+                            "Inter", "sans-serif"
+                    ],
+                    "label": [
+                            "Inter", "sans-serif"
+                    ]
+            },
+            "fontSize": {}
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline, .font-display { font-family: 'Public Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #16a34a, #15803d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-green-600 dark:text-green-500 font-headline">DET0X</div>
+<div class="hidden md:flex space-x-8 items-center font-body text-sm font-medium">
+<a class="text-green-600 dark:text-green-500 border-b-2 border-green-600 pb-1" href="index.html">Home</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="warehouse.html">Smart Warehouse</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="price.html">Price Intelligence</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="traceability.html">Traceability</a>
+</div>
+<button class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all active:scale-95 duration-200 text-sm shadow-md hover:shadow-lg">
+                Get Started
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-6 md:px-12 relative overflow-hidden bg-gradient-to-br from-green-50 via-white to-orange-50 min-h-[90vh] flex items-center">
+<!-- Abstract Background Shapes -->
+<div class="absolute top-20 left-[-10%] w-[40%] h-[60%] rounded-full bg-green-200/20 blur-3xl mix-blend-multiply"></div>
+<div class="absolute bottom-[-10%] right-[-5%] w-[50%] h-[50%] rounded-full bg-orange-200/20 blur-3xl mix-blend-multiply"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8 max-w-2xl">
+<div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span>Solving Farm-to-Fork in India</span>
+</div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold font-headline leading-[1.1] tracking-tight text-gray-900">
+                    Restructuring India's <br/>
+<span class="text-gradient">Agricultural Value Chain</span>
+</h1>
+<p class="text-xl md:text-2xl text-gray-600 font-body font-light leading-relaxed">
+                    Farmers grow the food. <strong class="font-semibold text-gray-900">They deserve the profit.</strong>
+</p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all active:scale-95 duration-200 shadow-lg shadow-green-600/30 flex items-center justify-center space-x-2">
+<span>Farmer Side</span>
+<span class="material-symbols-outlined text-xl">agriculture</span>
+</button>
+<button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all active:scale-95 duration-200 shadow-lg shadow-orange-500/30 flex items-center justify-center space-x-2">
+<span>Consumer Side</span>
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="relative w-full h-[400px] lg:h-[600px] drop-shadow-2xl flex items-center justify-center">
+<img class="object-contain w-full h-full transform hover:-translate-y-2 transition-transform duration-700" data-alt="An isometric 3D illustration showcasing a modern, high-tech agricultural supply chain ecosystem. In the center, a futuristic greenhouse stands next to a processing facility and a sleek delivery truck. Transparent data dashboards and digital graphs float above, indicating smart analytics. The color palette features vibrant greens, clean whites, and subtle orange accents, bathed in bright, soft light-mode illumination. The mood is innovative and efficient." src="https://lh3.googleusercontent.com/aida/AP1WRLsBEDbUW0u8E1lKbrS9dZ1L2haKNLu_u7rA0wu2-NqziMvrAt2A2qzAn71JtQQo3GO9Hs_tsIbVBT4qnylA5nCTlAiWR83nJVE7k2-7B6UvnvpE-N5KaRCrKrc1VdmRxbbcpQ1wT8fvgITA3e0pq3M6ul5rR0qKt3uSgBT4P54ldq797EoFZgMW0XVhvF9PXzT5nwAxzWcX7Gsyey5Tnhlg7E2MzP1kXp7ek0CxRLsyixvnzev-al3Q2mA"/>
+</div>
+</div>
+</section>
+<!-- Stats Strip -->
+<section class="py-12 px-6 md:px-12 relative z-20 -mt-16">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Stat 1 -->
+<div class="glass-card rounded-2xl p-6 shadow-xl shadow-gray-200/50 hover:shadow-2xl transition-shadow flex flex-col justify-center border-t-4 border-t-orange-500">
+<span class="text-sm font-medium text-gray-500 mb-1 uppercase tracking-wider">Annual Post-harvest losses</span>
+<div class="text-4xl font-black font-headline text-gray-900">₹1.53L Cr</div>
+</div>
+<!-- Stat 2 -->
+<div class="glass-card rounded-2xl p-6 shadow-xl shadow-gray-200/50 hover:shadow-2xl transition-shadow flex flex-col justify-center border-t-4 border-t-green-500">
+<span class="text-sm font-medium text-gray-500 mb-1 uppercase tracking-wider">Small &amp; Marginal Farmers</span>
+<div class="text-4xl font-black font-headline text-gray-900">86%</div>
+</div>
+<!-- Stat 3 -->
+<div class="glass-card rounded-2xl p-6 shadow-xl shadow-gray-200/50 hover:shadow-2xl transition-shadow flex flex-col justify-center border-t-4 border-t-orange-500">
+<span class="text-sm font-medium text-gray-500 mb-1 uppercase tracking-wider">Farmer's Share of Rupee</span>
+<div class="text-4xl font-black font-headline text-gray-900">30-37%</div>
+</div>
+<!-- Stat 4 -->
+<div class="glass-card rounded-2xl p-6 shadow-xl shadow-gray-200/50 hover:shadow-2xl transition-shadow flex flex-col justify-center border-t-4 border-t-green-500">
+<span class="text-sm font-medium text-gray-500 mb-1 uppercase tracking-wider">FPOs in India</span>
+<div class="text-4xl font-black font-headline text-gray-900">10,000+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Problem: Flow -->
+<section class="py-24 px-6 md:px-12 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold font-headline text-gray-900 mb-4">The Broken Value Chain</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Multiple intermediaries erode margins, leaving the creator of value with the least reward.</p>
+</div>
+<!-- Flow Visual -->
+<div class="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl mx-auto relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -z-10 transform -translate-y-1/2 rounded-full"></div>
+<!-- Steps -->
+<div class="flex flex-col items-center mb-8 md:mb-0 bg-white p-4 rounded-xl z-10">
+<div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-4 shadow-inner border-2 border-green-200">
+<span class="material-symbols-outlined text-3xl text-green-700">agriculture</span>
+</div>
+<div class="font-bold text-gray-900">Farmer</div>
+<div class="text-orange-600 font-black text-xl mt-1">₹30</div>
+</div>
+<div class="hidden md:flex items-center justify-center z-10 bg-white px-2">
+<span class="material-symbols-outlined text-gray-400">arrow_forward</span>
+</div>
+<div class="flex flex-col items-center mb-8 md:mb-0 bg-white p-4 rounded-xl z-10 opacity-70">
+<div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4 border border-gray-200">
+<span class="material-symbols-outlined text-2xl text-gray-600">storefront</span>
+</div>
+<div class="font-semibold text-gray-700 text-sm">Local Mandi</div>
+</div>
+<div class="hidden md:flex items-center justify-center z-10 bg-white px-2">
+<span class="material-symbols-outlined text-gray-400">arrow_forward</span>
+</div>
+<div class="flex flex-col items-center mb-8 md:mb-0 bg-white p-4 rounded-xl z-10 opacity-70">
+<div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4 border border-gray-200">
+<span class="material-symbols-outlined text-2xl text-gray-600">warehouse</span>
+</div>
+<div class="font-semibold text-gray-700 text-sm">Wholesaler</div>
+</div>
+<div class="hidden md:flex items-center justify-center z-10 bg-white px-2">
+<span class="material-symbols-outlined text-gray-400">arrow_forward</span>
+</div>
+<div class="flex flex-col items-center mb-8 md:mb-0 bg-white p-4 rounded-xl z-10 opacity-70">
+<div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4 border border-gray-200">
+<span class="material-symbols-outlined text-2xl text-gray-600">store</span>
+</div>
+<div class="font-semibold text-gray-700 text-sm">Retailer</div>
+</div>
+<div class="hidden md:flex items-center justify-center z-10 bg-white px-2">
+<span class="material-symbols-outlined text-gray-400">arrow_forward</span>
+</div>
+<div class="flex flex-col items-center bg-white p-4 rounded-xl z-10">
+<div class="w-20 h-20 rounded-full bg-orange-100 flex items-center justify-center mb-4 shadow-inner border-2 border-orange-200">
+<span class="material-symbols-outlined text-3xl text-orange-600">shopping_bag</span>
+</div>
+<div class="font-bold text-gray-900">Consumer</div>
+<div class="text-green-700 font-black text-xl mt-1">₹100</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<div class="inline-block bg-orange-50 border border-orange-100 rounded-lg px-6 py-3 text-orange-800 font-medium">
+<span class="material-symbols-outlined align-middle mr-2 text-orange-600">warning</span>
+                    Margin Erosion: 60-70% lost to inefficiencies and middlemen.
+                </div>
+</div>
+</div>
+</section>
+<!-- Comparison -->
+<section class="py-24 px-6 md:px-12 bg-gray-50">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold font-headline text-gray-900 mb-4">A Paradigm Shift</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Moving beyond legacy agritech limitations.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Competitor 1 -->
+<div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+<h3 class="text-xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-100">DeHaat Model</h3>
+<ul class="space-y-4 text-gray-600">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-red-500 mr-3 mt-0.5">cancel</span>
+<span>Limited cold chain infrastructure</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-gray-400 mr-3 mt-0.5">check_circle</span>
+<span>Strong input supply</span>
+</li>
+</ul>
+</div>
+<!-- Competitor 2 -->
+<div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm opacity-80 hover:opacity-100 transition-opacity">
+<h3 class="text-xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-100">Ninjacart Model</h3>
+<ul class="space-y-4 text-gray-600">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-red-500 mr-3 mt-0.5">cancel</span>
+<span>High inventory risk</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-gray-400 mr-3 mt-0.5">check_circle</span>
+<span>B2B routing network</span>
+</li>
+</ul>
+</div>
+<!-- DET0X -->
+<div class="bg-gradient-to-b from-green-50 to-white rounded-2xl p-8 border-2 border-green-500 shadow-xl shadow-green-100 relative transform md:-translate-y-4">
+<div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase shadow-md">
+                        The DET0X Solution
+                    </div>
+<h3 class="text-2xl font-black text-green-700 mb-6 pb-4 border-b border-green-200 text-center mt-2 font-headline">DET0X</h3>
+<ul class="space-y-5 text-gray-800 font-medium">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-600 mr-3 mt-0.5 text-2xl">check_circle</span>
+<span>Smart Warehouse Network</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-600 mr-3 mt-0.5 text-2xl">check_circle</span>
+<span>End-to-End Traceability</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-green-600 mr-3 mt-0.5 text-2xl">check_circle</span>
+<span>Zero Inventory Risk</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 3 Pillars (Bento Grid Style) -->
+<section class="py-24 px-6 md:px-12 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold font-headline text-gray-900 mb-4">Three Pillars of Growth</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Technology designed to empower the farm-to-fork ecosystem.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Pillar 1 -->
+<div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="h-40 flex items-center justify-center mb-6 relative z-10">
+<img class="h-full object-contain drop-shadow-lg group-hover:-translate-y-2 transition-transform duration-500" data-alt="A 3D isometric rendering of a modern smart warehouse facility equipped with solar panels on the roof. A refrigerated delivery truck is parked at the loading dock. Drones hover nearby. The scene highlights energy efficiency and advanced logistics in agriculture. Bright, light-mode aesthetic with greens and clean whites." src="https://lh3.googleusercontent.com/aida/AP1WRLsbp1PnlE4KVJ4JEg9yCImRWqXb1w05MEgJyhUnEb_6pSA_SnGPJAVOLw3bytHxEJOABrEujOJYCF8-rk-LXZqho0HC6AcRYp6sZqXHxImAupGNFs02TTno4jFTsva6XxqhEGC8rNOv3hDBpjHc9_fLcGpd9faPalPiQYjKjaX5mB6XWwhhe9b1vaJ5nJfUYv5ZrDmw4k5dUdB_qXH9dZ2Y-8Ln0rAsD65AAtCzE-cDD_Cj6d5hHhfyE_l3"/>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold font-headline text-gray-900 mb-3">Smart Warehouse &amp; Financing</h3>
+<p class="text-gray-600 leading-relaxed">Decentralized cold storage minimizing post-harvest losses, coupled with inventory-backed financing for FPOs.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="h-40 flex items-center justify-center mb-6 relative z-10">
+<!-- Reusing icon from IMAGE_7 based on prompt request -->
+<img class="h-full object-contain drop-shadow-lg group-hover:-translate-y-2 transition-transform duration-500" data-alt="A set of three isolated 3D isometric icons floating on a transparent background. One icon shows a frosty, high-tech cold storage warehouse with glowing blue accents. Another shows a glowing green blockchain link symbolizing traceability. The third shows a translucent digital dashboard with bar charts and a magnifying glass, representing analytics. Bright, premium aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLvOLLjS723Lsh5DjcgpKXqUQCLTaKvmcqtJto0ojk3NlxT_gnhmCM3UYEQ00wZXrHc5AoKsbaPSyqjbLO7-XR35MQlba8GxjuEI4YrTGrxvK2CfrsqG0qmPXbJQ7svCUJRH8duYSvIt02d-wurE8wHNqnZaPGghaUpodypZLG9rnal5jBFrMh6GSfZteHWSD06UT_9SHYJYcOXeChspH02QkuCScNLAcDRwV0wWXbJYyjO2jMrdP0Csvl0l" style="clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%); transform-origin: top right; transform: scale(1.5) translate(-10%, 10%);"/>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold font-headline text-gray-900 mb-3">Price Intelligence Hub</h3>
+<p class="text-gray-600 leading-relaxed">AI-driven predictive analytics providing real-time market data to ensure fair pricing and optimal harvest timing.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden relative md:col-span-2 lg:col-span-1">
+<div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="h-40 flex items-center justify-center mb-6 relative z-10">
+<!-- Reusing icon from IMAGE_7 based on prompt request -->
+<img class="h-full object-contain drop-shadow-lg group-hover:-translate-y-2 transition-transform duration-500" data-alt="A set of three isolated 3D isometric icons floating on a transparent background. One icon shows a frosty, high-tech cold storage warehouse with glowing blue accents. Another shows a glowing green blockchain link symbolizing traceability. The third shows a translucent digital dashboard with bar charts and a magnifying glass, representing analytics. Bright, premium aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLvOLLjS723Lsh5DjcgpKXqUQCLTaKvmcqtJto0ojk3NlxT_gnhmCM3UYEQ00wZXrHc5AoKsbaPSyqjbLO7-XR35MQlba8GxjuEI4YrTGrxvK2CfrsqG0qmPXbJQ7svCUJRH8duYSvIt02d-wurE8wHNqnZaPGghaUpodypZLG9rnal5jBFrMh6GSfZteHWSD06UT_9SHYJYcOXeChspH02QkuCScNLAcDRwV0wWXbJYyjO2jMrdP0Csvl0l" style="clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%); transform-origin: bottom center; transform: scale(1.2) translateY(-20%);"/>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold font-headline text-gray-900 mb-3">Direct Chain &amp; Traceability</h3>
+<p class="text-gray-600 leading-relaxed">Blockchain-backed transparent routing connecting FPOs directly to retailers, guaranteeing origin and quality.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Market Opportunity / Chart -->
+<section class="py-24 px-6 md:px-12 bg-gray-900 text-white relative overflow-hidden">
+<!-- Subtle grid background -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl md:text-5xl font-bold font-headline mb-6">The Market Opportunity</h2>
+<p class="text-xl text-gray-400 mb-8 font-light">India produces <span class="text-white font-semibold">370M tonnes</span> of horticulture annually, yet only <span class="text-orange-500 font-semibold">11-12%</span> sees cold storage.</p>
+<div class="space-y-6">
+<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+<div class="flex items-center justify-between mb-2">
+<span class="font-medium text-gray-300">Amul Model (Dairy) Farmer Share</span>
+<span class="text-2xl font-bold text-green-400">70-75%</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="bg-green-500 h-3 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/5">
+<div class="flex items-center justify-between mb-2">
+<span class="font-medium text-gray-400">Current F&amp;V Farmer Share</span>
+<span class="text-2xl font-bold text-orange-500">30-37%</span>
+</div>
+<div class="w-full bg-gray-800 rounded-full h-3">
+<div class="bg-orange-500 h-3 rounded-full" style="width: 35%"></div>
+</div>
+</div>
+</div>
+<p class="mt-8 text-gray-400 italic text-sm">DET0X aims to bridge this gap, replicating the dairy success story for fruits and vegetables.</p>
+</div>
+<div class="relative h-[400px] bg-gradient-to-br from-green-900/50 to-gray-800/50 rounded-3xl border border-white/10 flex items-center justify-center p-8 backdrop-blur-xl">
+<!-- Abstract Data Viz representation -->
+<div class="w-full h-full flex items-end justify-between space-x-2">
+<div class="w-1/6 bg-orange-500/80 rounded-t-lg h-[35%] hover:h-[40%] transition-all duration-300"></div>
+<div class="w-1/6 bg-orange-400/80 rounded-t-lg h-[45%] hover:h-[50%] transition-all duration-300"></div>
+<div class="w-1/6 bg-green-600/80 rounded-t-lg h-[60%] hover:h-[65%] transition-all duration-300"></div>
+<div class="w-1/6 bg-green-500/80 rounded-t-lg h-[75%] hover:h-[80%] transition-all duration-300"></div>
+<div class="w-1/6 bg-green-400/80 rounded-t-lg h-[95%] hover:h-[100%] transition-all duration-300 relative group">
+<div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-white text-gray-900 text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">Goal</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-950 w-full py-12 border-t border-gray-200 dark:border-gray-800 flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-gray-900 dark:text-white font-headline mb-4 md:mb-0">DET0X</div>
+<div class="font-body text-sm text-gray-500 dark:text-gray-400 mb-6 md:mb-0 text-center md:text-left">
+                © 2026 DET0X. Partnered with IIT (ISM) Dhanbad.
+            </div>
+<div class="flex space-x-6">
+<a class="font-body text-sm text-gray-500 dark:text-gray-400 text-gray-500 hover:text-orange-500 transition-colors hover:underline transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="font-body text-sm text-gray-500 dark:text-gray-400 text-gray-500 hover:text-orange-500 transition-colors hover:underline transition-opacity duration-300" href="#">Terms of Service</a>
+<a class="font-body text-sm text-gray-500 dark:text-gray-400 text-gray-500 hover:text-orange-500 transition-colors hover:underline transition-opacity duration-300" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>
