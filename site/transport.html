@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DET0X — Transport & Employment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = { darkMode: "class", theme: { extend: { fontFamily: { headline: ["Public Sans","sans-serif"], body: ["Inter","sans-serif"] } } } }
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3,h4,h5,h6,.font-headline { font-family: 'Public Sans', sans-serif; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased overflow-x-hidden">
+
+<!-- Nav -->
+<nav class="bg-white/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 shadow-sm">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+<a href="index.html" class="text-2xl font-black tracking-tighter text-green-600 font-headline no-underline">DET0X</a>
+<div class="hidden md:flex space-x-6 items-center text-sm font-medium">
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="index.html">Home</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="trust.html">Trust</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="awareness.html">Awareness</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="storage.html">Storage</a>
+<a class="text-green-600 border-b-2 border-green-600 pb-1" href="transport.html">Transport</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="business-model.html">Business Model</a>
+</div>
+<button onclick="window.location.href='business-model.html'" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all text-sm shadow-md">View Model</button>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="pt-32 pb-20 px-6 md:px-12 bg-gradient-to-br from-purple-50 via-white to-green-50 min-h-[70vh] flex items-center relative overflow-hidden">
+<div class="absolute bottom-[-10%] right-[-5%] w-[40%] h-[50%] rounded-full bg-purple-100/30 blur-3xl"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center space-x-2 bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+<span>Problem #4 — Movement & People</span>
+</div>
+<h1 class="text-5xl md:text-6xl font-extrabold font-headline leading-[1.1] text-gray-900 mb-6">
+Transport &<br/><span class="text-purple-600">Employment</span>
+</h1>
+<p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
+Farmers scramble for trucks. Drivers get only 10-15 days of work per month. <strong class="text-gray-900">The entire logistics layer is broken.</strong>
+</p>
+</div>
+</div>
+</section>
+
+<!-- The Dual Problem -->
+<section class="py-20 px-6 md:px-12 bg-white">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-center text-gray-900 mb-16">Two Problems, One Solution</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-red-50 rounded-2xl p-10 border border-red-100">
+<span class="material-symbols-outlined text-red-500 text-5xl mb-6">agriculture</span>
+<h3 class="font-headline font-bold text-2xl mb-4 text-gray-900">Farmer's Problem</h3>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5 text-lg">close</span><span>Must independently find trucks and drivers</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5 text-lg">close</span><span>No organized transport for produce collection</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5 text-lg">close</span><span>No visibility on delivery to warehouse or buyer</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5 text-lg">close</span><span>Produce often damaged during unorganized transport</span></li>
+</ul>
+</div>
+<div class="bg-purple-50 rounded-2xl p-10 border border-purple-100">
+<span class="material-symbols-outlined text-purple-500 text-5xl mb-6">person</span>
+<h3 class="font-headline font-bold text-2xl mb-4 text-gray-900">Worker's Problem</h3>
+<ul class="space-y-3 text-gray-600">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-purple-400 mt-0.5 text-lg">close</span><span>Truck drivers work only 10-15 days/month</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-purple-400 mt-0.5 text-lg">close</span><span>No guaranteed income, no job security</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-purple-400 mt-0.5 text-lg">close</span><span>No shelter or accommodation support</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-purple-400 mt-0.5 text-lg">close</span><span>Irregular work across different employers</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- DET0X Method -->
+<section class="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+<span class="material-symbols-outlined text-lg">lightbulb</span>
+<span>The DET0X Method</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-gray-900 mb-4">Organized Logistics Workforce</h2>
+<p class="text-gray-500 max-w-3xl mx-auto">The organization takes full responsibility for transportation — from farm pickup to final delivery — while creating stable employment for transport workers.</p>
+</div>
+
+<!-- What we coordinate -->
+<div class="bg-white rounded-3xl shadow-xl shadow-gray-100 border border-gray-100 p-8 md:p-12 max-w-5xl mx-auto mb-16">
+<h3 class="font-headline font-bold text-xl text-center text-gray-900 mb-8">What DET0X Coordinates</h3>
+<div class="grid md:grid-cols-5 gap-4 text-center">
+<div class="bg-green-50 rounded-xl p-4 border border-green-100">
+<span class="material-symbols-outlined text-green-600 text-3xl mb-2">agriculture</span>
+<div class="text-sm font-bold text-gray-900">Farm Pickup</div>
+<div class="text-xs text-gray-500">Collect from field</div>
+</div>
+<div class="bg-green-50 rounded-xl p-4 border border-green-100">
+<span class="material-symbols-outlined text-green-600 text-3xl mb-2">warehouse</span>
+<div class="text-sm font-bold text-gray-900">To Warehouse</div>
+<div class="text-xs text-gray-500">Safe storage</div>
+</div>
+<div class="bg-green-50 rounded-xl p-4 border border-green-100">
+<span class="material-symbols-outlined text-green-600 text-3xl mb-2">swap_horiz</span>
+<div class="text-sm font-bold text-gray-900">Inter-Warehouse</div>
+<div class="text-xs text-gray-500">Move between hubs</div>
+</div>
+<div class="bg-orange-50 rounded-xl p-4 border border-orange-100">
+<span class="material-symbols-outlined text-orange-600 text-3xl mb-2">factory</span>
+<div class="text-sm font-bold text-gray-900">To Processing</div>
+<div class="text-xs text-gray-500">Value-add facility</div>
+</div>
+<div class="bg-orange-50 rounded-xl p-4 border border-orange-100">
+<span class="material-symbols-outlined text-orange-600 text-3xl mb-2">store</span>
+<div class="text-sm font-bold text-gray-900">Final Delivery</div>
+<div class="text-xs text-gray-500">Buyers & retailers</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Employment Comparison -->
+<section class="py-20 px-6 md:px-12 bg-gray-900 text-white">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-center mb-16">Employment: Unorganized vs. DET0X</h2>
+<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<!-- Unorganized -->
+<div class="bg-red-900/20 rounded-2xl p-8 border border-red-500/20">
+<div class="text-red-400 font-bold text-sm uppercase tracking-widest mb-6">❌ Current Reality</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="text-3xl font-black font-headline text-red-400">10-15</div>
+<div class="text-gray-300">working days per month</div>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="bg-red-500 h-3 rounded-full" style="width: 40%"></div>
+</div>
+<ul class="space-y-2 text-sm text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-red-400 text-sm mt-0.5">close</span>No guaranteed monthly income</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-red-400 text-sm mt-0.5">close</span>Different employer each trip</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-red-400 text-sm mt-0.5">close</span>No shelter or accommodation</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-red-400 text-sm mt-0.5">close</span>No benefits or job security</li>
+</ul>
+</div>
+</div>
+<!-- DET0X -->
+<div class="bg-green-900/20 rounded-2xl p-8 border border-green-500/20">
+<div class="text-green-400 font-bold text-sm uppercase tracking-widest mb-6">✅ With DET0X</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="text-3xl font-black font-headline text-green-400">25</div>
+<div class="text-gray-300">working days per month + 5 holidays</div>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-3">
+<div class="bg-green-500 h-3 rounded-full" style="width: 83%"></div>
+</div>
+<ul class="space-y-2 text-sm text-gray-400">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-green-400 text-sm mt-0.5">check</span>Stable monthly payment</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-green-400 text-sm mt-0.5">check</span>Single organized employer</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-green-400 text-sm mt-0.5">check</span>Shelter & accommodation support</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-green-400 text-sm mt-0.5">check</span>Part of the agricultural ecosystem</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Workforce Roles -->
+<section class="py-20 px-6 md:px-12 bg-white">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-center text-gray-900 mb-4">The DET0X Workforce</h2>
+<p class="text-gray-500 text-center max-w-2xl mx-auto mb-16">The same principle extends to everyone in the supply chain — creating an organized agricultural workforce.</p>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="bg-green-50 rounded-xl p-6 text-center border border-green-100 hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-green-600 text-3xl mb-3">local_shipping</span>
+<div class="text-sm font-bold text-gray-900">Truck Drivers</div>
+</div>
+<div class="bg-green-50 rounded-xl p-6 text-center border border-green-100 hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-green-600 text-3xl mb-3">fitness_center</span>
+<div class="text-sm font-bold text-gray-900">Loaders</div>
+</div>
+<div class="bg-green-50 rounded-xl p-6 text-center border border-green-100 hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-green-600 text-3xl mb-3">warehouse</span>
+<div class="text-sm font-bold text-gray-900">Warehouse Staff</div>
+</div>
+<div class="bg-orange-50 rounded-xl p-6 text-center border border-orange-100 hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-orange-600 text-3xl mb-3">package_2</span>
+<div class="text-sm font-bold text-gray-900">Packagers</div>
+</div>
+<div class="bg-orange-50 rounded-xl p-6 text-center border border-orange-100 hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-orange-600 text-3xl mb-3">delivery_truck_speed</span>
+<div class="text-sm font-bold text-gray-900">Delivery</div>
+</div>
+<div class="bg-orange-50 rounded-xl p-6 text-center border border-orange-100 hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-orange-600 text-3xl mb-3">build</span>
+<div class="text-sm font-bold text-gray-900">Maintenance</div>
+</div>
+</div>
+<div class="text-center mt-8">
+<div class="inline-block bg-gray-100 rounded-xl px-6 py-3 text-sm text-gray-600">
+<span class="material-symbols-outlined text-green-600 align-middle mr-2 text-lg">groups</span>
+<strong>46.1%</strong> of India's workforce is in agriculture — this creates stable jobs for millions.
+<span class="text-[10px] text-gray-400 ml-1">Govt Census</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Key Insight -->
+<section class="py-20 px-6 md:px-12 bg-gray-50">
+<div class="max-w-4xl mx-auto text-center">
+<div class="bg-gradient-to-br from-purple-50 to-green-50 rounded-3xl p-12 border border-purple-100">
+<span class="material-symbols-outlined text-purple-500 text-6xl mb-6">psychology</span>
+<h2 class="text-2xl md:text-3xl font-bold font-headline text-gray-900 mb-6">The Key Insight</h2>
+<blockquote class="text-xl text-gray-700 leading-relaxed italic mb-6">
+"While solving the farmer's logistics problem, the organization simultaneously <strong class="text-purple-700 not-italic">creates stable employment opportunities</strong> for people involved in the supply chain."
+</blockquote>
+<p class="text-sm text-gray-500">— From the DET0X operational philosophy</p>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-6 md:px-12 bg-green-600 text-white text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl font-bold font-headline mb-4">Trust ✓ Awareness ✓ Storage ✓ Transport ✓</h2>
+<p class="text-green-100 mb-8">See how all these pieces connect into the complete DET0X business model.</p>
+<a href="business-model.html" class="inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-colors shadow-lg">
+View Complete Business Model <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-50 py-12 border-t border-gray-200">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-sm text-gray-500">© 2026 DET0X. Partnered with IIT (ISM) Dhanbad.</div>
+<div class="flex space-x-6 text-sm text-gray-400">
+<a href="index.html" class="hover:text-green-600">Home</a>
+<a href="trust.html" class="hover:text-green-600">Trust</a>
+<a href="awareness.html" class="hover:text-green-600">Awareness</a>
+<a href="storage.html" class="hover:text-green-600">Storage</a>
+<a href="transport.html" class="hover:text-green-600">Transport</a>
+<a href="business-model.html" class="hover:text-green-600">Business Model</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DET0X — The Trust Problem</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = { darkMode: "class", theme: { extend: { fontFamily: { headline: ["Public Sans","sans-serif"], body: ["Inter","sans-serif"] } } } }
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+h1,h2,h3,h4,h5,h6,.font-headline { font-family: 'Public Sans', sans-serif; }
+.glass-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.5); }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased overflow-x-hidden">
+
+<!-- Nav -->
+<nav class="bg-white/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 shadow-sm">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
+<a href="index.html" class="text-2xl font-black tracking-tighter text-green-600 font-headline no-underline">DET0X</a>
+<div class="hidden md:flex space-x-6 items-center text-sm font-medium">
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="index.html">Home</a>
+<a class="text-green-600 border-b-2 border-green-600 pb-1" href="trust.html">Trust</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="awareness.html">Awareness</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="storage.html">Storage</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="transport.html">Transport</a>
+<a class="text-gray-600 hover:text-green-600 transition-colors" href="business-model.html">Business Model</a>
+</div>
+<button onclick="window.location.href='business-model.html'" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all text-sm shadow-md">View Model</button>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="pt-32 pb-20 px-6 md:px-12 bg-gradient-to-br from-amber-50 via-white to-green-50 min-h-[70vh] flex items-center relative overflow-hidden">
+<div class="absolute top-10 right-[-10%] w-[40%] h-[60%] rounded-full bg-amber-100/30 blur-3xl"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center space-x-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+<span class="material-symbols-outlined text-lg">priority_high</span>
+<span>Problem #1 — The Foundation</span>
+</div>
+<h1 class="text-5xl md:text-6xl font-extrabold font-headline leading-[1.1] text-gray-900 mb-6">
+The Trust<br/><span class="text-amber-600">Problem</span>
+</h1>
+<p class="text-xl text-gray-600 leading-relaxed max-w-2xl">
+Farmers have been exploited by middlemen for generations. They don't trust new organizations. <strong class="text-gray-900">Trust must be earned through proof, not promises.</strong>
+</p>
+</div>
+</div>
+</section>
+
+<!-- The Reality -->
+<section class="py-20 px-6 md:px-12 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-gray-900 mb-4">Why Farmers Don't Trust</h2>
+<p class="text-gray-500 max-w-2xl mx-auto">Every year, farmers face broken promises from traders, delayed payments, rigged scales, and exploitative pricing. Here's what they experience:</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-red-50 rounded-2xl p-8 border border-red-100">
+<span class="material-symbols-outlined text-red-500 text-4xl mb-4">gavel</span>
+<h3 class="font-headline font-bold text-xl mb-3 text-gray-900">Broken Promises</h3>
+<p class="text-gray-600 text-sm leading-relaxed">Traders promise good prices at the start of the season, then offer far less when the crop is ready. Farmers have no recourse.</p>
+</div>
+<div class="bg-red-50 rounded-2xl p-8 border border-red-100">
+<span class="material-symbols-outlined text-red-500 text-4xl mb-4">money_off</span>
+<h3 class="font-headline font-bold text-xl mb-3 text-gray-900">Delayed Payments</h3>
+<p class="text-gray-600 text-sm leading-relaxed">Even after selling, payments are delayed for weeks or months. Farmers are forced to borrow at 24-60% interest from moneylenders. <span class="text-[10px] text-red-500">Source: WDRA/RBI</span></p>
+</div>
+<div class="bg-red-50 rounded-2xl p-8 border border-red-100">
+<span class="material-symbols-outlined text-red-500 text-4xl mb-4">groups_off</span>
+<h3 class="font-headline font-bold text-xl mb-3 text-gray-900">Unknown Third Parties</h3>
+<p class="text-gray-600 text-sm leading-relaxed">Produce is sent to unknown warehouses, handled by unknown transport. Farmers have zero visibility or control over their own crop.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- The DET0X Method: Trust Building -->
+<section class="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+<span class="material-symbols-outlined text-lg">lightbulb</span>
+<span>The DET0X Method</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-gray-900 mb-4">Trust Through Proof, Not Promises</h2>
+<p class="text-gray-500 max-w-2xl mx-auto">Instead of asking thousands of farmers to trust us, we start small, prove results, and let successful farmers become our best advocates.</p>
+</div>
+
+<!-- 4-Step Process -->
+<div class="relative">
+<!-- Connector line -->
+<div class="hidden lg:block absolute top-1/2 left-[10%] w-[80%] h-0.5 bg-green-200 -translate-y-1/2 z-0"></div>
+<div class="grid md:grid-cols-4 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="bg-white rounded-2xl p-8 shadow-lg shadow-gray-100 border border-gray-100 text-center hover:-translate-y-2 transition-transform">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="text-2xl font-black text-green-700 font-headline">1</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-3 text-gray-900">Select Small Group</h3>
+<p class="text-gray-500 text-sm">Choose a small pilot group of farmers we can work with directly. No mass promises.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white rounded-2xl p-8 shadow-lg shadow-gray-100 border border-gray-100 text-center hover:-translate-y-2 transition-transform">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="text-2xl font-black text-green-700 font-headline">2</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-3 text-gray-900">Deliver Real Results</h3>
+<p class="text-gray-500 text-sm">Provide storage, transport, and selling support. Record everything: crop saved, wastage reduced, price received, profit gained.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white rounded-2xl p-8 shadow-lg shadow-gray-100 border border-gray-100 text-center hover:-translate-y-2 transition-transform">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="text-2xl font-black text-green-700 font-headline">3</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-3 text-gray-900">Create Proof of Concept</h3>
+<p class="text-gray-500 text-sm">Documented success becomes undeniable evidence. Real numbers from real farmers in their own community.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white rounded-2xl p-8 shadow-lg shadow-gray-100 border border-gray-100 text-center hover:-translate-y-2 transition-transform">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="text-2xl font-black text-green-700 font-headline">4</span>
+</div>
+<h3 class="font-headline font-bold text-lg mb-3 text-gray-900">Trust-Based Expansion</h3>
+<p class="text-gray-500 text-sm">Successful farmers recruit others from their community. Trust spreads through peer influence, not advertising.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Proof Metrics -->
+<section class="py-20 px-6 md:px-12 bg-gray-900 text-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold font-headline mb-4">What We Measure & Prove</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">For every pilot farmer, we carefully record these 4 metrics as hard evidence:</p>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-green-400 text-5xl mb-4">inventory</span>
+<div class="text-2xl font-black font-headline text-green-400 mb-2">Crop Saved</div>
+<p class="text-gray-400 text-sm">How much produce was preserved vs. would have been lost</p>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-orange-400 text-5xl mb-4">delete_forever</span>
+<div class="text-2xl font-black font-headline text-orange-400 mb-2">Wastage Reduced</div>
+<p class="text-gray-400 text-sm">Percentage reduction in spoilage and contamination losses</p>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-green-400 text-5xl mb-4">trending_up</span>
+<div class="text-2xl font-black font-headline text-green-400 mb-2">Better Price</div>
+<p class="text-gray-400 text-sm">Price received vs. what distress selling would have yielded</p>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-orange-400 text-5xl mb-4">savings</span>
+<div class="text-2xl font-black font-headline text-orange-400 mb-2">Extra Profit</div>
+<p class="text-gray-400 text-sm">Additional income generated compared to the old method</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Trust Expansion Circle -->
+<section class="py-24 px-6 md:px-12 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-gray-900 mb-6">Trust Expands in Circles</h2>
+<p class="text-gray-600 leading-relaxed mb-8">The joining process is kept <strong>simple and minimal</strong> — no unnecessary formalities. When a farmer sees their neighbor earning more, saving more, and losing less, they want in. That's the most powerful marketing in rural India.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4 bg-green-50 rounded-xl p-4">
+<span class="material-symbols-outlined text-green-600 mt-1">circle</span>
+<div>
+<div class="font-bold text-gray-900">Circle 1: Pilot Farmers</div>
+<div class="text-sm text-gray-600">5-10 farmers selected from one region. Full support provided.</div>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-green-50/70 rounded-xl p-4">
+<span class="material-symbols-outlined text-green-500 mt-1">radio_button_unchecked</span>
+<div>
+<div class="font-bold text-gray-900">Circle 2: Community Expansion</div>
+<div class="text-sm text-gray-600">Pilot farmers share results → neighbors join. 50-100 farmers.</div>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-green-50/50 rounded-xl p-4">
+<span class="material-symbols-outlined text-green-400 mt-1">radio_button_unchecked</span>
+<div>
+<div class="font-bold text-gray-900">Circle 3: Regional Network</div>
+<div class="text-sm text-gray-600">Successful communities attract neighboring villages. 500+ farmers.</div>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-green-50/30 rounded-xl p-4">
+<span class="material-symbols-outlined text-green-300 mt-1">radio_button_unchecked</span>
+<div>
+<div class="font-bold text-gray-900">Circle 4: State-Level Scale</div>
+<div class="text-sm text-gray-600">Proven model replicates across agricultural regions. 10,000+ farmers.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual -->
+<div class="flex items-center justify-center">
+<div class="relative w-80 h-80">
+<div class="absolute inset-0 rounded-full border-2 border-dashed border-green-200 animate-pulse"></div>
+<div class="absolute inset-8 rounded-full border-2 border-dashed border-green-300"></div>
+<div class="absolute inset-16 rounded-full border-2 border-dashed border-green-400"></div>
+<div class="absolute inset-24 rounded-full bg-green-500 flex items-center justify-center shadow-xl shadow-green-500/30">
+<div class="text-center text-white">
+<span class="material-symbols-outlined text-3xl">groups</span>
+<div class="text-xs font-bold mt-1">Pilot<br/>Farmers</div>
+</div>
+</div>
+<div class="absolute top-2 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full text-xs font-bold text-green-700 shadow-sm">10,000+</div>
+<div class="absolute top-10 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-green-600 shadow-sm">500+</div>
+<div class="absolute bottom-16 right-8 bg-white px-3 py-1 rounded-full text-xs font-bold text-green-500 shadow-sm">50-100</div>
+<div class="absolute bottom-28 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full text-xs font-bold text-green-800 shadow-sm">5-10</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Before / After -->
+<section class="py-20 px-6 md:px-12 bg-gray-50">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold font-headline text-center text-gray-900 mb-16">Before vs. After DET0X</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-red-50 rounded-2xl p-10 border border-red-200">
+<div class="text-red-600 font-bold text-sm uppercase tracking-widest mb-4">❌ Traditional System</div>
+<ul class="space-y-4 text-gray-700">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5">close</span><span>Farmer must independently find buyers</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5">close</span><span>No storage → forced to sell immediately at low prices</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5">close</span><span>Produce sent to unknown third-party warehouses</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5">close</span><span>Promises broken, payments delayed for weeks</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-red-400 mt-0.5">close</span><span>Farmer gets only 30-37% of consumer price</span></li>
+</ul>
+</div>
+<div class="bg-green-50 rounded-2xl p-10 border-2 border-green-300 shadow-lg shadow-green-100">
+<div class="text-green-700 font-bold text-sm uppercase tracking-widest mb-4">✅ With DET0X Trust Model</div>
+<ul class="space-y-4 text-gray-700">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-green-500 mt-0.5">check</span><span>Organization handles everything — storage, transport, selling</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-green-500 mt-0.5">check</span><span>Partner warehouses within the farmer's own network</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-green-500 mt-0.5">check</span><span>Every result recorded — crop saved, profit gained, wastage reduced</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-green-500 mt-0.5">check</span><span>Simple joining — no unnecessary formalities</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-green-500 mt-0.5">check</span><span>Trust grows through real results, not marketing</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-6 md:px-12 bg-green-600 text-white text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl font-bold font-headline mb-4">Trust is the foundation. What's next?</h2>
+<p class="text-green-100 mb-8">Once trust is established, the next challenge is solving the storage crisis.</p>
+<a href="storage.html" class="inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-colors shadow-lg">
+Next: Storage & Logistics <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-50 py-12 border-t border-gray-200">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-sm text-gray-500">© 2026 DET0X. Partnered with IIT (ISM) Dhanbad.</div>
+<div class="flex space-x-6 text-sm text-gray-400">
+<a href="index.html" class="hover:text-green-600">Home</a>
+<a href="trust.html" class="hover:text-green-600">Trust</a>
+<a href="awareness.html" class="hover:text-green-600">Awareness</a>
+<a href="storage.html" class="hover:text-green-600">Storage</a>
+<a href="transport.html" class="hover:text-green-600">Transport</a>
+<a href="business-model.html" class="hover:text-green-600">Business Model</a>
+</div>
+</div>
+</footer>
+</body></html>
