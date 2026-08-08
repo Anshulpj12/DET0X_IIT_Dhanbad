@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DET0X - Restructuring India's Agricultural Value Chain</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {},
-            "borderRadius": {
-                    "DEFAULT": "0.5rem",
-                    "lg": "1rem",
-                    "xl": "1.5rem",
-                    "full": "9999px"
-            },
-            "spacing": {},
-            "fontFamily": {
-                    "headline": [
-                            "Public Sans", "sans-serif"
-                    ],
-                    "display": [
-                            "Public Sans", "sans-serif"
-                    ],
-                    "body": [
-                            "Inter", "sans-serif"
-                    ],
-                    "label": [
-                            "Inter", "sans-serif"
-                    ]
-            },
-            "fontSize": {}
-          },
-        },
-      }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6, .font-headline, .font-display { font-family: 'Public Sans', sans-serif; }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #16a34a, #15803d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+<html class="light" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>DET0X - Restructuring India's Agricultural Value Chain</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {},
+                                        "borderRadius": {
+                                                "DEFAULT": "0.5rem",
+                                                "lg": "1rem",
+                                                "xl": "1.5rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {},
+                                        "fontFamily": {
+                                                "headline": [
+                                                        "Public Sans", "sans-serif"
+                                                ],
+                                                "display": [
+                                                        "Public Sans", "sans-serif"
+                                                ],
+                                                "body": [
+                                                        "Inter", "sans-serif"
+                                                ],
+                                                "label": [
+                                                        "Inter", "sans-serif"
+                                                ]
+                                        },
+                                        "fontSize": {}
+                                },
+                        },
+                }
+        </script>
+        <style>
+                body {
+                        font-family: 'Inter', sans-serif;
+                }
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                .font-headline,
+                .font-display {
+                        font-family: 'Public Sans', sans-serif;
+                }
+
+                .glass-card {
+                        background: rgba(255, 255, 255, 0.7);
+                        backdrop-filter: blur(16px);
+                        -webkit-backdrop-filter: blur(16px);
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                }
+
+                .text-gradient {
+                        background: linear-gradient(to right, #16a34a, #15803d);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                }
+        </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900 antialiased overflow-x-hidden selection:bg-green-100 selection:text-green-900">
 <!-- TopNavBar -->
 <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 dark:border-gray-800 shadow-sm">
 <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto">
 <a href="index.html" class="text-2xl font-black tracking-tighter text-green-600 dark:text-green-500 font-headline no-underline">DET0X</a>
-<div class="hidden md:flex space-x-8 items-center font-body text-sm font-medium">
+<div class="hidden lg:flex space-x-5 items-center font-body text-sm font-medium">
 <a class="text-green-600 dark:text-green-500 border-b-2 border-green-600 pb-1" href="index.html">Home</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="warehouse.html">Smart Warehouse</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="price.html">Price Intelligence</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="trust.html">Trust</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="awareness.html">Awareness</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="storage.html">Storage</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="transport.html">Transport</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="business-model.html">Business Model</a>
+<span class="text-gray-300">|</span>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="warehouse.html">Warehouse</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="price.html">Price Hub</a>
 <a class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-500 transition-colors" href="traceability.html">Traceability</a>
 </div>
-<button onclick="window.location.href='warehouse.html'" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all active:scale-95 duration-200 text-sm shadow-md hover:shadow-lg">
-                Get Started
-            </button>
+<button onclick="window.location.href='business-model.html'" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full font-medium transition-all active:scale-95 duration-200 text-sm shadow-md hover:shadow-lg">
+                View Model
+</button>
 </div>
 </nav>
 <!-- Hero Section -->
